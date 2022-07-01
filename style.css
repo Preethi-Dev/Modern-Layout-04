@@ -1,0 +1,24 @@
+/* resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+  font-family: "Edition";
+  src: url(assets/fonts/Edition-BxnV.ttf);
+}
+@font-face {
+  font-family: "Rogueland Slab";
+  src: url(assets/fonts/NCS\ Rogueland\ Slab\ Bold.ttf);
+}
+
+/* variables */
+
+/* base style */
+
+/* mobile style */
