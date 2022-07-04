@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* fonts */
 @font-face {
   font-family: "Edition";
@@ -18,7 +22,184 @@
 }
 
 /* variables */
+:root {
+  --primary: #000000;
+}
 
 /* base style */
+.container {
+  min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header nav a {
+  font-family: "Edition";
+  font-style: normal;
+  font-weight: 400;
+  color: var(--primary);
+}
+
+.flex {
+  display: flex;
+}
+
+nav {
+  padding: 1.5rem;
+}
+footer {
+  padding: 1.5rem 0;
+}
+
+nav div > * + * {
+  margin-left: 0.5rem;
+}
+
+main h1 {
+  font-family: "Rogueland Slab";
+  font-style: normal;
+  font-weight: 700;
+}
+
+.price h2 {
+  font-family: "Rogueland Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.dollar_price p,
+.eth_price p {
+  font-family: "Edition";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.price {
+  margin-bottom: 8px;
+}
+
+.bg {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    135deg,
+    #f093fb 0%,
+    #f5576c 19.38%,
+    #fee140 39.17%,
+    #f36aac 59.49%,
+    #00c9ff 79.8%,
+    #6f86d6 100%
+  );
+  filter: blur(360px);
+  z-index: -1;
+}
+footer p {
+  font-family: "Rogueland Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: max-content;
+}
+
+footer {
+  grid-column: 1 / -1;
+}
 
 /* mobile style */
+
+main {
+  padding: 1.5rem;
+  margin-top: 80px;
+}
+
+nav.flex {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+main.grid {
+  grid-template-rows: auto auto auto;
+}
+
+main h1 {
+  font-size: 4.375rem;
+  grid-row: 1;
+}
+
+main > * {
+  grid-column: 1 / -1;
+}
+
+main .bg {
+  grid-row: 1 / span 4;
+  justify-self: center;
+}
+
+main .prices {
+  grid-row: 2 / span 2;
+  align-self: start;
+}
+
+main .image {
+  grid-row: 1;
+  grid-column-start: span 3;
+  grid-column-end: -1;
+}
+
+@media screen and (min-width: 600px) {
+  main .bg {
+    grid-row: 1 / span 2;
+  }
+
+  main h1 {
+    font-size: 6.375rem;
+  }
+
+  main .image {
+    grid-row: 1 / span 3;
+  }
+}
+@media screen and (min-width: 800px) {
+  main {
+    margin-top: 0;
+  }
+
+  main h1 {
+    font-size: 8.375rem;
+  }
+
+  main .prices {
+    display: flex;
+    gap: 4rem;
+  }
+
+  main .image {
+    grid-column-start: span 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main h1 {
+    font-size: 10.375rem;
+  }
+
+  main .image {
+    width: 80%;
+  }
+}
