@@ -153,6 +153,10 @@ main .prices {
   align-self: start;
 }
 
+main .prices > * + * {
+  margin-top: 1rem;
+}
+
 main .image {
   grid-row: 1;
   grid-column-start: span 3;
@@ -184,6 +188,10 @@ main .image {
   main .prices {
     display: flex;
     gap: 4rem;
+  }
+
+  main .prices > * {
+    margin: 0;
   }
 
   main .image {
